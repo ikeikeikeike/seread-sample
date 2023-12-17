@@ -48,7 +48,7 @@ jobs:
           GH_TOKEN: ${{ steps.alert_token.outputs.token }}
           OWNER: ikeikeikeike
           REPOSITORY: seread-sample
-          QUERY: {}
+          QUERY: "{}"
         run: |
           echo ${{env.OWNER}}
           gh api graphql --paginate -F owner="${{env.OWNER}}" -F name="${{env.REPOSITORY}}" -f query="${{env.QUERY}}"
